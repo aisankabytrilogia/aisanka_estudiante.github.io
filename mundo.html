@@ -1,0 +1,574 @@
+<!-- AISANKA — Interfaz interactiva de mundos de aprendizaje con tarjeta glass, navegación y perfil. -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AISANKA | Mundos</title>
+
+    <link rel="stylesheet" href="mundo.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+<div class="fondo-mundos" id="fondoMundos">
+    <div class="particulas-fondo">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+<header class="encabezado">
+
+    <div class="marca">
+        <span class="marca-punto"></span>
+
+        <span class="logo-pequeno">
+            AISANKA
+        </span>
+    </div>
+
+    <div class="saludo-estudiante">
+        <span class="hola">
+            Hola,
+        </span>
+
+        <span
+            id="nombreEstudiante"
+            class="nombre-estudiante"
+        >
+            Estudiante
+        </span>
+    </div>
+
+    <button
+        class="boton-perfil"
+        id="botonPerfil"
+        type="button"
+        aria-label="Abrir perfil del estudiante"
+    >
+        <span class="perfil-brillo"></span>
+
+        <img
+            id="avatarEncabezado"
+            src="images/perfil_guardabarranco.png"
+            alt="Avatar del estudiante"
+        >
+
+        <span>
+            Mi perfil
+        </span>
+    </button>
+
+</header>
+
+<main class="contenedor-principal">
+
+    <section class="bienvenida">
+
+        <span class="linea-decorativa"></span>
+
+        <p class="texto-superior">
+            EXPLORA Y APRENDE
+        </p>
+
+        <h1>
+            Descubre nuevos mundos
+        </h1>
+
+        <p class="subtitulo">
+            Elige un mundo y comienza una nueva aventura de aprendizaje.
+        </p>
+
+    </section>
+
+    <section
+        class="carrusel"
+        aria-label="Mundos de aprendizaje"
+    >
+
+        <button
+            class="boton-carrusel boton-anterior"
+            id="botonAnterior"
+            type="button"
+            aria-label="Mundo anterior"
+        >
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="mundo-contenedor">
+
+            <article
+                class="tarjeta-mundo"
+                id="tarjetaMundo"
+            >
+
+                <div class="borde-luminoso"></div>
+
+                <div class="destello-tarjeta"></div>
+
+                <div class="encabezado-tarjeta">
+
+                    <div class="numero-tarjeta">
+                        <span id="numeroTarjeta">
+                            01
+                        </span>
+                    </div>
+
+                    <div
+                        class="etiqueta-estado"
+                        id="etiquetaEstado"
+                    >
+                        <i class="fa-solid fa-unlock"></i>
+
+                        <span>
+                            Disponible
+                        </span>
+                    </div>
+
+                </div>
+
+                <div
+                    class="imagen-mundo-contenedor"
+                    id="zonaImagenMundo"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Entrar al mundo"
+                >
+
+                    <div class="halo-imagen"></div>
+
+                    <div class="decoracion decoracion-uno"></div>
+                    <div class="decoracion decoracion-dos"></div>
+                    <div class="decoracion decoracion-tres"></div>
+
+                    <div class="ondas-imagen">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <img
+                        id="imagenMundo"
+                        class="imagen-mundo"
+                        src="images/mundo1.png"
+                        alt="Mundo 1"
+                    >
+
+                    <div
+                        class="indicador-interaccion"
+                        id="indicadorInteraccion"
+                    >
+                        <i class="fa-solid fa-arrow-pointer"></i>
+
+                        <span>
+                            Explorar
+                        </span>
+                    </div>
+
+                    <div
+                        class="candado-mundo"
+                        id="candadoMundo"
+                    >
+                        <div class="candado-circulo">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+
+                        <span>
+                            Próximamente
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="contenido-mundo">
+
+                    <span class="pequena-etiqueta">
+                        MUNDO <span id="textoNumeroMundo">1</span>
+                    </span>
+
+                    <h2
+                        id="nombreMundo"
+                        class="nombre-mundo"
+                    >
+                        Aprendamos a saludar
+                    </h2>
+
+                    <p
+                        id="descripcionMundo"
+                        class="descripcion-mundo"
+                    >
+                        Aprende diferentes formas de saludar y conocer a otras personas.
+                    </p>
+
+                    <button
+                        id="botonEntrarMundo"
+                        class="boton-entrar"
+                        type="button"
+                    >
+
+                        <span class="icono-boton">
+                            <i class="fa-solid fa-play"></i>
+                        </span>
+
+                        <span id="textoBotonMundo">
+                            COMENZAR MUNDO 1
+                        </span>
+
+                        <span class="circulo-flecha">
+                            <i class="fa-solid fa-arrow-right flecha-boton"></i>
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+        <button
+            class="boton-carrusel boton-siguiente"
+            id="botonSiguiente"
+            type="button"
+            aria-label="Mundo siguiente"
+        >
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </section>
+
+    <div
+        class="indicadores"
+        id="indicadores"
+        aria-label="Seleccionar mundo"
+    >
+
+        <button
+            class="indicador activo"
+            data-mundo="0"
+            type="button"
+            aria-label="Ir al mundo 1"
+        >
+            <span></span>
+        </button>
+
+        <button
+            class="indicador"
+            data-mundo="1"
+            type="button"
+            aria-label="Ir al mundo 2"
+        >
+            <span></span>
+        </button>
+
+        <button
+            class="indicador"
+            data-mundo="2"
+            type="button"
+            aria-label="Ir al mundo 3"
+        >
+            <span></span>
+        </button>
+
+    </div>
+
+    <div class="mensaje-ayuda">
+
+        <span class="icono-ayuda">
+            <i class="fa-solid fa-hand-pointer"></i>
+        </span>
+
+        <span>
+            Selecciona un mundo para comenzar
+        </span>
+
+    </div>
+
+</main>
+
+
+<div
+    class="modal-overlay"
+    id="modalBloqueado"
+>
+    <div
+        class="modal modal-bloqueado"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="tituloBloqueado"
+    >
+
+        <button
+            class="modal-cerrar"
+            id="cerrarModalBloqueado"
+            type="button"
+            aria-label="Cerrar ventana"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="modal-icono bloqueado">
+            <i class="fa-solid fa-lock"></i>
+        </div>
+
+        <span class="modal-etiqueta">
+            MUNDO NO DISPONIBLE
+        </span>
+
+        <h2 id="tituloBloqueado">
+            Este mundo está bloqueado
+        </h2>
+
+        <p id="mensajeBloqueado">
+            Este mundo todavía no ha sido habilitado por tu docente.
+        </p>
+
+        <button
+            class="boton-modal"
+            id="botonEntendidoBloqueado"
+            type="button"
+        >
+            Entendido
+        </button>
+
+    </div>
+</div>
+
+
+<div
+    class="modal-overlay"
+    id="modalPerfil"
+>
+    <div
+        class="modal modal-perfil"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="tituloPerfil"
+    >
+
+        <button
+            class="modal-cerrar"
+            id="cerrarModalPerfil"
+            type="button"
+            aria-label="Cerrar perfil"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="perfil-cabecera">
+
+            <div class="perfil-avatar">
+
+                <div class="halo-avatar"></div>
+
+                <div class="halo-avatar halo-avatar-dos"></div>
+
+                <img
+                    id="avatarPerfil"
+                    src="images/perfil_guardabarranco.png"
+                    alt="Avatar del estudiante"
+                >
+
+            </div>
+
+            <span class="perfil-etiqueta">
+                MI PERFIL
+            </span>
+
+            <h2 id="tituloPerfil">
+                Mi perfil
+            </h2>
+
+            <h3 id="nombrePerfil">
+                Estudiante
+            </h3>
+
+            <p
+                class="texto-correo"
+                id="correoPerfil"
+            >
+                correo@ejemplo.com
+            </p>
+
+        </div>
+
+        <div class="informacion-perfil">
+
+            <div class="dato-perfil">
+
+                <span class="dato-icono">
+                    <i class="fa-solid fa-school"></i>
+                </span>
+
+                <div>
+                    <span>Escuela</span>
+                    <strong id="escuelaPerfil">
+                        CPACS
+                    </strong>
+                </div>
+
+            </div>
+
+            <div class="dato-perfil">
+
+                <span class="dato-icono">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                </span>
+
+                <div>
+                    <span>Docente</span>
+                    <strong id="docentePerfil">
+                        Henrry Montes
+                    </strong>
+                </div>
+
+            </div>
+
+            <div class="dato-perfil">
+
+                <span class="dato-icono">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </span>
+
+                <div>
+                    <span>Grado</span>
+                    <strong id="gradoPerfil">
+                        6.º grado
+                    </strong>
+                </div>
+
+            </div>
+
+            <div class="dato-perfil">
+
+                <span class="dato-icono">
+                    <i class="fa-solid fa-location-dot"></i>
+                </span>
+
+                <div>
+                    <span>Ubicación</span>
+                    <strong id="ubicacionPerfil">
+                        Jinotega
+                    </strong>
+                </div>
+
+            </div>
+
+            <div class="dato-perfil">
+
+                <span class="dato-icono">
+                    <i class="fa-solid fa-map"></i>
+                </span>
+
+                <div>
+                    <span>Zona</span>
+                    <strong id="zonaPerfil">
+                        Área urbana
+                    </strong>
+                </div>
+
+            </div>
+
+            <div class="dato-perfil dato-destacado">
+
+                <span class="dato-icono">
+                    <i class="fa-solid fa-star"></i>
+                </span>
+
+                <div>
+                    <span>Héroes coleccionados</span>
+                    <strong id="heroesPerfil">
+                        0
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="seleccion-avatar">
+
+            <div class="titulo-avatar">
+
+                <div>
+                    <span>
+                        PERSONALIZA
+                    </span>
+
+                    <h4>
+                        Elige tu avatar
+                    </h4>
+                </div>
+
+            </div>
+
+            <div class="avatares">
+
+                <button
+                    class="avatar-opcion seleccionado"
+                    data-avatar="perfil_guardabarranco.png"
+                    type="button"
+                    aria-label="Elegir Guardabarranco"
+                >
+                    <img
+                        src="images/perfil_guardabarranco.png"
+                        alt="Guardabarranco"
+                    >
+                </button>
+
+                <button
+                    class="avatar-opcion"
+                    data-avatar="perfil_gueguense.png"
+                    type="button"
+                    aria-label="Elegir Güegüense"
+                >
+                    <img
+                        src="images/perfil_gueguense.png"
+                        alt="Güegüense"
+                    >
+                </button>
+
+                <button
+                    class="avatar-opcion"
+                    data-avatar="perfil_gigantona.png"
+                    type="button"
+                    aria-label="Elegir Gigantona"
+                >
+                    <img
+                        src="images/perfil_gigantona.png"
+                        alt="Gigantona"
+                    >
+                </button>
+
+            </div>
+
+        </div>
+
+        <button
+            class="boton-cerrar-sesion"
+            id="botonCerrarSesion"
+            type="button"
+        >
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Cerrar sesión
+        </button>
+
+    </div>
+</div>
+
+<script src="mundo.js"></script>
+
+</body>
+</html>

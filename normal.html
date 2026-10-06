@@ -1,0 +1,472 @@
+<!-- AISANKA NORMAL: estructura de las tarjetas de aprendizaje, juego de ahorcado, ventanas emergentes y colección de héroes. -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AISANKA - Parastah</title>
+
+    <link rel="stylesheet" href="normal.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <div class="background-effects">
+        <span class="bubble bubble-1"></span>
+        <span class="bubble bubble-2"></span>
+        <span class="bubble bubble-3"></span>
+        <span class="bubble bubble-4"></span>
+    </div>
+
+    <div class="progress-container">
+        <div class="progress-info">
+            <span id="progressText">1 de 4</span>
+            <span id="progressLabel">Aprendamos una palabra</span>
+        </div>
+
+        <div class="progress-bar">
+            <div id="progressFill"></div>
+        </div>
+    </div>
+
+    <main id="lessonContainer">
+
+        <section class="lesson-card active gradient-1" data-card="1">
+
+            <div class="card-content">
+
+                <div class="lesson-badge">
+                    <i class="fa-solid fa-language"></i>
+                    <span>Palabra nueva</span>
+                </div>
+
+                <h1>Parastah</h1>
+
+                <div class="translation">
+                    <span>Significa</span>
+                    <strong>Hola</strong>
+                </div>
+
+                <div class="word-decoration">
+                    <span>P</span>
+                    <span>A</span>
+                    <span>R</span>
+                    <span>A</span>
+                    <span>S</span>
+                    <span>T</span>
+                    <span>A</span>
+                    <span>H</span>
+                </div>
+
+                <div class="video-wrapper">
+                    <video
+                        id="helloVideo"
+                        class="lesson-video"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                    >
+                        <source src="videos/hola_guardabarranco.mp4" type="video/mp4">
+                        Tu navegador no puede reproducir este video.
+                    </video>
+
+                    <div class="video-overlay">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+
+                <p class="instruction-text">
+                    Observa al guardabarranco y descubre nuestra nueva palabra.
+                </p>
+
+                <button class="gradient-button next-button" data-next="2">
+                    Continuar
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+        </section>
+
+
+        <section class="lesson-card gradient-2" data-card="2">
+
+            <div class="card-content">
+
+                <div class="lesson-badge">
+                    <i class="fa-solid fa-volume-high"></i>
+                    <span>Escucha</span>
+                </div>
+
+                <h2>Ahora escucha</h2>
+
+                <p class="explanation">
+                    Escucha con atención cómo suena la palabra.
+                </p>
+
+                <div class="pronunciation-card">
+
+                    <span class="small-label">Mayangna</span>
+
+                    <strong>Parastah</strong>
+
+                    <button id="playAudioButton" class="audio-button">
+                        <i class="fa-solid fa-volume-high"></i>
+                        Escuchar
+                    </button>
+
+                    <div class="sound-wave" id="soundWave">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+
+                <audio id="pronunciationAudio" preload="auto">
+                    <source src="sounds/parastah.mp3" type="audio/mpeg">
+                </audio>
+
+                <p class="attention-text">
+                    Presiona el botón y escucha hasta reconocer el sonido.
+                </p>
+
+                <div class="button-row">
+
+                    <button class="secondary-button back-button" data-back="1">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Volver
+                    </button>
+
+                    <button class="gradient-button next-button" data-next="3">
+                        Continuar
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="lesson-card gradient-3" data-card="3">
+
+            <div class="card-content">
+
+                <div class="lesson-badge">
+                    <i class="fa-solid fa-pen"></i>
+                    <span>Aprende a escribir</span>
+                </div>
+
+                <h2>¿Cómo se escribe?</h2>
+
+                <p class="explanation">
+                    Observa paso a paso cómo se escribe la palabra en Mayangna.
+                </p>
+
+                <div class="writing-video-wrapper">
+
+                    <video
+                        id="writingVideo"
+                        class="lesson-video"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                    >
+                        <source
+                            src="videos/escritura_hola_mayangna.mp4"
+                            type="video/mp4"
+                        >
+                    </video>
+
+                </div>
+
+                <div class="writing-word">
+                    <span>PARASTAH</span>
+                </div>
+
+                <div class="button-row">
+
+                    <button class="secondary-button back-button" data-back="2">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Volver
+                    </button>
+
+                    <button class="gradient-button next-button" data-next="4">
+                        Ya lo entendí
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="lesson-card gradient-4" data-card="4">
+
+            <div class="card-content">
+
+                <div class="lesson-badge">
+                    <i class="fa-solid fa-gamepad"></i>
+                    <span>¡Prepárate!</span>
+                </div>
+
+                <h2>Ahora vamos a jugar</h2>
+
+                <p class="explanation">
+                    Tendrás que descubrir cómo se escribe la palabra.
+                </p>
+
+                <div class="game-instructions">
+
+                    <div class="instruction-item">
+                        <div class="instruction-icon">
+                            <i class="fa-solid fa-keyboard"></i>
+                        </div>
+
+                        <div>
+                            <strong>1. Elige una letra</strong>
+                            <p>Presiona una de las letras disponibles.</p>
+                        </div>
+                    </div>
+
+                    <div class="instruction-item">
+                        <div class="instruction-icon">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <div>
+                            <strong>2. Acierta</strong>
+                            <p>Si la letra pertenece a la palabra, aparecerá.</p>
+                        </div>
+                    </div>
+
+                    <div class="instruction-item">
+                        <div class="instruction-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <div>
+                            <strong>3. Ten cuidado</strong>
+                            <p>Cada error construirá una parte del muñeco.</p>
+                        </div>
+                    </div>
+
+                    <div class="instruction-item">
+                        <div class="instruction-icon">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <div>
+                            <strong>4. Consigue estrellas</strong>
+                            <p>Cuantos menos intentos necesites, más estrellas ganas.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="objective">
+                    <i class="fa-solid fa-bullseye"></i>
+                    <span>Tu misión: descubrir <strong>PARASTAH</strong></span>
+                </div>
+
+                <div class="button-row">
+
+                    <button class="secondary-button back-button" data-back="3">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Volver
+                    </button>
+
+                    <button id="startGameButton" class="gradient-button">
+                        Comenzar juego
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="gameScreen" class="lesson-card game-card gradient-game">
+
+            <div class="card-content">
+
+                <div class="game-header">
+
+                    <div>
+                        <span class="game-label">RETO</span>
+                        <h2>Descubre la palabra</h2>
+                    </div>
+
+                    <div class="attempt-counter">
+                        <i class="fa-solid fa-heart"></i>
+                        <span id="attemptText">Intento 1</span>
+                    </div>
+
+                </div>
+
+                <div class="hangman-area">
+
+                    <svg
+                        id="hangman"
+                        class="hangman"
+                        viewBox="0 0 260 300"
+                        aria-label="Muñeco del ahorcado"
+                    >
+
+                        <line class="hangman-part" x1="35" y1="270" x2="225" y2="270"/>
+                        <line class="hangman-part" x1="75" y1="270" x2="75" y2="35"/>
+                        <line class="hangman-part" x1="75" y1="35" x2="180" y2="35"/>
+                        <line class="hangman-part" x1="180" y1="35" x2="180" y2="75"/>
+
+                        <circle class="hangman-part body-part" data-part="1" cx="180" cy="105" r="30"/>
+
+                        <line class="hangman-part body-part" data-part="2" x1="180" y1="135" x2="180" y2="205"/>
+
+                        <line class="hangman-part body-part" data-part="3" x1="180" y1="150" x2="145" y2="185"/>
+
+                     
+                        <line class="hangman-part body-part" data-part="4" x1="180" y1="150" x2="215" y2="185"/>
+
+                        
+                        <line class="hangman-part body-part" data-part="5" x1="180" y1="205" x2="145" y2="245"/>
+
+          
+                        <line class="hangman-part body-part" data-part="6" x1="180" y1="205" x2="215" y2="245"/>
+
+                    </svg>
+
+                </div>
+
+                <div id="wordDisplay" class="word-display"></div>
+
+                <p id="gameMessage" class="game-message">
+                    Elige una letra para comenzar.
+                </p>
+
+                <div id="lettersContainer" class="letters-container"></div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <div id="starsModal" class="modal-overlay">
+
+        <div class="modal-card stars-modal">
+
+            <button class="modal-close" data-close="starsModal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-icon star-icon">
+                <i class="fa-solid fa-star"></i>
+            </div>
+
+            <span class="modal-small-title">RETO COMPLETADO</span>
+
+            <h2>¡Muy bien!</h2>
+
+            <p>Has descubierto la palabra.</p>
+
+            <div id="starsContainer" class="stars-container"></div>
+
+            <strong id="starsMessage" class="stars-message"></strong>
+
+            <button id="continueHeroButton" class="gradient-button">
+                Continuar
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div id="heroModal" class="modal-overlay">
+
+        <div class="modal-card hero-modal">
+
+            <div class="hero-shine"></div>
+
+            <div class="hero-badge">
+                <i class="fa-solid fa-shield"></i>
+                HÉROE DESBLOQUEADO
+            </div>
+
+            <h2 id="heroTitle">Nuevo héroe</h2>
+
+            <div class="hero-image-container">
+                <img id="heroImage" src="" alt="Héroe desbloqueado">
+            </div>
+
+            <p id="heroDescription">
+                Has conseguido un nuevo héroe para tu colección.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button id="mapButton" class="gradient-button">
+                    <i class="fa-solid fa-map"></i>
+                    Volver al mapa
+                </button>
+
+                <button id="collectionButton" class="secondary-button">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Ver héroes coleccionados
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="collectionModal" class="modal-overlay">
+
+        <div class="modal-card collection-modal">
+
+            <button class="modal-close" data-close="collectionModal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-icon collection-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <span class="modal-small-title">MI COLECCIÓN</span>
+
+            <h2>Héroes desbloqueados</h2>
+
+            <div id="heroesCollection" class="heroes-collection"></div>
+
+            <button id="collectionMapButton" class="gradient-button">
+                <i class="fa-solid fa-map"></i>
+                Volver al mapa
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="normal.js"></script>
+
+</body>
+</html>

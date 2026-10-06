@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AISANKA - Aprende a decir hola en chino"
+    >
+
+    <title>AISANKA | Hola en chino</title>
+
+    <link rel="stylesheet" href="autismo.css">
+</head>
+
+<body>
+
+
+    <div
+        id="dynamicBackground"
+        class="dynamic-background background-orange"
+    >
+
+        <div class="background-glow glow-1"></div>
+        <div class="background-glow glow-2"></div>
+        <div class="background-glow glow-3"></div>
+
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+
+        <div class="background-grid"></div>
+
+    </div>
+
+
+
+    <main class="lesson-container">
+
+
+
+        <button
+            id="backButton"
+            class="back-button"
+            type="button"
+            aria-label="Volver"
+        >
+
+            <span class="back-arrow">←</span>
+
+            <span>Volver</span>
+
+        </button>
+
+
+
+        <div class="progress-area">
+
+            <div class="progress-top">
+
+                <div class="progress-brand">
+                    AISANKA
+                </div>
+
+                <div class="progress-text">
+
+                    <span id="stepTitle">
+                        Aprende una palabra
+                    </span>
+
+                    <span id="stepCounter">
+                        1 / 5
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div
+                    id="progressFill"
+                    class="progress-fill"
+                ></div>
+
+            </div>
+
+
+            <div class="progress-dots">
+
+                <span class="progress-dot active"></span>
+                <span class="progress-dot"></span>
+                <span class="progress-dot"></span>
+                <span class="progress-dot"></span>
+                <span class="progress-dot"></span>
+
+            </div>
+
+        </div>
+
+
+
+        <section
+            id="step1"
+            class="lesson-step active"
+        >
+
+            <div class="lesson-card">
+
+                <div class="card-header">
+
+                    <div class="step-info">
+
+                        <span class="lesson-number">
+                            PASO 1
+                        </span>
+
+                        <span class="lesson-label">
+                            APRENDE
+                        </span>
+
+                    </div>
+
+                    <div class="card-status">
+                        01
+                    </div>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <div class="section-kicker">
+                        HOY APRENDEREMOS
+                    </div>
+
+                    <p class="small-title">
+                        A decir
+                    </p>
+
+                    <h1 class="main-word">
+                        Hola
+                    </h1>
+
+
+                    <div class="language-pair">
+
+                        <div class="language-item">
+
+                            <span class="language-label">
+                                CHINO
+                            </span>
+
+                            <div class="chinese-word">
+                                你好
+                            </div>
+
+                        </div>
+
+
+                        <div class="language-divider"></div>
+
+
+                        <div class="language-item">
+
+                            <span class="language-label">
+                                LATINO
+                            </span>
+
+                            <div class="latin-word">
+                                nǐ hǎo
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="word-meaning">
+                        Así se dice "hola" en chino.
+                    </p>
+
+                </div>
+
+
+                <div class="video-container">
+
+                    <div class="video-label">
+                        MIRA Y APRENDE
+                    </div>
+
+                    <video
+                        id="helloVideo"
+                        class="lesson-video"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                    >
+
+                        <source
+                            src="videos/hola_guardabarranco.mp4"
+                            type="video/mp4"
+                        >
+
+                        Tu navegador no puede reproducir este video.
+
+                    </video>
+
+                </div>
+
+
+                <button
+                    id="nextStep1"
+                    class="primary-button"
+                    type="button"
+                >
+
+                    <span>Continuar</span>
+
+                    <span class="button-arrow">
+                        →
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <section
+            id="step2"
+            class="lesson-step"
+        >
+
+            <div class="lesson-card">
+
+                <div class="card-header">
+
+                    <div class="step-info">
+
+                        <span class="lesson-number">
+                            PASO 2
+                        </span>
+
+                        <span class="lesson-label">
+                            ESCUCHA
+                        </span>
+
+                    </div>
+
+                    <div class="card-status">
+                        02
+                    </div>
+
+                </div>
+
+
+                <div class="card-content listen-content">
+
+                    <div class="section-kicker">
+                        ESCUCHA Y REPITE
+                    </div>
+
+
+                    <div class="sound-visualizer">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+
+                    <div class="language-pair large">
+
+                        <div class="language-item">
+
+                            <span class="language-label">
+                                CHINO
+                            </span>
+
+                            <div class="chinese-word medium">
+                                你好
+                            </div>
+
+                        </div>
+
+
+                        <div class="language-divider"></div>
+
+
+                        <div class="language-item">
+
+                            <span class="language-label">
+                                LATINO
+                            </span>
+
+                            <div class="latin-word large-latin">
+                                nǐ hǎo
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <h2 class="listen-title">
+                        Escucha cómo suena
+                    </h2>
+
+                    <p class="listen-description">
+                        Escucha la palabra y después intenta repetirla.
+                    </p>
+
+                </div>
+
+
+                <audio
+                    id="chineseAudio"
+                    src="sounds/hola_chino.mp3"
+                    preload="auto"
+                ></audio>
+
+
+                <button
+                    id="playAudio"
+                    class="audio-button"
+                    type="button"
+                >
+
+                    <span class="audio-icon">
+                        ▶
+                    </span>
+
+                    <span>
+                        Escuchar nuevamente
+                    </span>
+
+                </button>
+
+
+                <div
+                    id="audioStatus"
+                    class="audio-status"
+                >
+                    Preparado para escuchar
+                </div>
+
+
+                <button
+                    id="nextStep2"
+                    class="primary-button"
+                    type="button"
+                >
+
+                    <span>Ya lo escuché</span>
+
+                    <span class="button-arrow">
+                        →
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section
+            id="step3"
+            class="lesson-step"
+        >
+
+            <div class="lesson-card">
+
+                <div class="card-header">
+
+                    <div class="step-info">
+
+                        <span class="lesson-number">
+                            PASO 3
+                        </span>
+
+                        <span class="lesson-label">
+                            ESCRITURA
+                        </span>
+
+                    </div>
+
+                    <div class="card-status">
+                        03
+                    </div>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <div class="section-kicker">
+                        ASÍ SE ESCRIBE
+                    </div>
+
+                    <p class="writing-intro">
+                        Mira los caracteres y su pronunciación.
+                    </p>
+
+
+                    <div class="writing-language-card">
+
+                        <div class="writing-column">
+
+                            <span class="language-label">
+                                CHINO
+                            </span>
+
+                            <div class="chinese-word writing-word">
+                                你好
+                            </div>
+
+                        </div>
+
+
+                        <div class="writing-separator"></div>
+
+
+                        <div class="writing-column">
+
+                            <span class="language-label">
+                                LATINO
+                            </span>
+
+                            <div class="latin-word writing-latin">
+                                nǐ hǎo
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="video-container writing-video">
+
+                    <div class="video-label">
+                        OBSERVA LA ESCRITURA
+                    </div>
+
+                    <video
+                        id="writingVideo"
+                        class="lesson-video"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                    >
+
+                        <source
+                            src="videos/escritura_hola_chino.mp4"
+                            type="video/mp4"
+                        >
+
+                        Tu navegador no puede reproducir este video.
+
+                    </video>
+
+                </div>
+
+
+                <button
+                    id="nextStep3"
+                    class="primary-button"
+                    type="button"
+                >
+
+                    <span>Continuar</span>
+
+                    <span class="button-arrow">
+                        →
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <section
+            id="step4"
+            class="lesson-step"
+        >
+
+            <div class="lesson-card game-instructions-card">
+
+                <div class="card-header">
+
+                    <div class="step-info">
+
+                        <span class="lesson-number">
+                            PASO 4
+                        </span>
+
+                        <span class="lesson-label">
+                            PREPÁRATE
+                        </span>
+
+                    </div>
+
+                    <div class="card-status">
+                        04
+                    </div>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <div class="section-kicker">
+                        ANTES DE JUGAR
+                    </div>
+
+
+                    <h2 class="instruction-title">
+                        ¿Qué debes hacer?
+                    </h2>
+
+
+                    <p class="instruction-intro">
+                        Busca las dos tarjetas que tienen
+                        la misma palabra que aprendiste.
+                    </p>
+
+
+                    <div class="instruction-demo">
+
+                        <div class="demo-card demo-back">
+
+                            <span class="demo-question">
+                                ?
+                            </span>
+
+                            <span>
+                                TARJETA
+                            </span>
+
+                        </div>
+
+
+                        <div class="demo-arrow">
+                            →
+                        </div>
+
+
+                        <div class="demo-card demo-answer">
+
+                            <span class="demo-chinese">
+                                    nǐ hǎo
+                            </span>
+
+                            <span class="demo-latin">
+                                nǐ hǎo
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="game-rules">
+
+                        <div class="rule">
+
+                            <div class="rule-number">
+                                01
+                            </div>
+
+                            <div class="rule-text">
+
+                                <strong>
+                                    Elige una tarjeta
+                                </strong>
+
+                                <span>
+                                    Pulsa sobre una tarjeta para descubrirla.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="rule">
+
+                            <div class="rule-number">
+                                02
+                            </div>
+
+                            <div class="rule-text">
+
+                                <strong>
+                                    Busca otra igual
+                                </strong>
+
+                                <span>
+                                    Debes encontrar las dos tarjetas de
+                                    <b>   ni hao — nǐ hǎo</b>.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="rule">
+
+                            <div class="rule-number">
+                                03
+                            </div>
+
+                            <div class="rule-text">
+
+                                <strong>
+                                    Completa el reto
+                                </strong>
+
+                                <span>
+                                    Encuentra las dos tarjetas correctas
+                                    para ganar estrellas.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+       
+
+                    <div class="words-preview">
+
+                        <span class="preview-title">
+                            EN EL JUEGO APARECERÁN
+                        </span>
+
+
+                        <div class="preview-words">
+
+                            <div class="preview-word correct-word">
+
+                                <strong>
+                                       ni hao
+                                </strong>
+
+                                <span>
+                                    ni hao
+                                </span>
+
+                            </div>
+
+
+                            <div class="preview-word">
+
+                                <strong>
+                                    NAKSA
+                                </strong>
+
+                                <span>
+                                    naksa
+                                </span>
+
+                            </div>
+
+
+                            <div class="preview-word">
+
+                                <strong>
+                                    PARASTAH
+                                </strong>
+
+                                <span>
+                                    parastah
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="startGameButton"
+                    class="primary-button game-start-button"
+                    type="button"
+                >
+
+                    <span>Comenzar juego</span>
+
+                    <span class="button-arrow">
+                        →
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <section
+            id="step5"
+            class="lesson-step game-step"
+        >
+
+            <div class="game-card">
+
+                <div class="game-top">
+
+                    <button
+                        id="gameBackButton"
+                        class="game-back"
+                        type="button"
+                    >
+                        ← Instrucciones
+                    </button>
+
+
+                    <div class="game-counter">
+
+                        <span>
+                            Intentos
+                        </span>
+
+                        <strong id="attemptCounter">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="game-title-area">
+
+                    <div class="game-badge">
+                        RETO FINAL
+                    </div>
+
+                    <h2>
+                        Encuentra las dos tarjetas
+                    </h2>
+
+                    <p>
+                        Encuentra las dos tarjetas que
+                        corresponden a <strong>你好 — nǐ hǎo</strong>.
+                    </p>
+
+                </div>
+
+
+
+                <div class="target-word">
+
+                    <span class="target-label">
+                        ENCUENTRA
+                    </span>
+
+                    <strong>
+                         nǐ hǎo
+                    </strong>
+
+               
+                </div>
+
+
+
+                <div
+                    id="memoryBoard"
+                    class="memory-board"
+                >
+                </div>
+
+
+                <div
+                    id="gameMessage"
+                    class="game-message"
+                ></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <div
+        id="starsModal"
+        class="modal-overlay"
+        aria-hidden="true"
+    >
+
+        <div class="modal-card stars-modal">
+
+            <div class="modal-glow"></div>
+
+            <div class="modal-icon stars-icon">
+                ★
+            </div>
+
+            <span class="modal-small-title">
+                RETO COMPLETADO
+            </span>
+
+            <h2>
+                Muy bien
+            </h2>
+
+            <p class="attempt-result">
+                Completaste el juego en
+                <strong id="finalAttempts">
+                    0
+                </strong>
+                intentos.
+            </p>
+
+
+            <div
+                id="starsResult"
+                class="stars-result"
+            >
+                ★ ★ ★
+            </div>
+
+
+            <p
+                id="starsDescription"
+                class="stars-description"
+            >
+                Excelente trabajo.
+            </p>
+
+            <button
+                id="continueHeroButton"
+                class="primary-button"
+                type="button"
+            >
+
+                <span>Continuar</span>
+
+                <span class="button-arrow">
+                    →
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <div
+        id="heroModal"
+        class="modal-overlay"
+        aria-hidden="true"
+    >
+
+        <div class="modal-card hero-modal">
+
+            <span class="hero-badge">
+                NUEVO HÉROE
+            </span>
+
+            <div class="hero-rays"></div>
+
+            <div class="hero-image-container">
+
+                <img
+                    id="unlockedHeroImage"
+                    src="images/benjamin.png"
+                    alt="Héroe desbloqueado"
+                >
+
+            </div>
+
+
+            <h2>
+                Héroe desbloqueado
+            </h2>
+
+            <p class="hero-name">
+                Benjamín Zeledón
+            </p>
+
+            <p class="hero-description">
+                Has conseguido un nuevo héroe para tu colección.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <button
+                    id="returnMapButton"
+                    class="secondary-button"
+                    type="button"
+                >
+                    ← Volver al mapa
+                </button>
+
+                <button
+                    id="collectionButton"
+                    class="primary-button"
+                    type="button"
+                >
+                    Ver héroes
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div
+        id="collectionModal"
+        class="modal-overlay"
+        aria-hidden="true"
+    >
+
+        <div class="modal-card collection-modal">
+
+            <div class="collection-header">
+
+                <span class="collection-badge">
+                    MI COLECCIÓN
+                </span>
+
+                <h2>
+                    Héroes desbloqueados
+                </h2>
+
+                <p>
+                    Estos son los héroes que has conseguido.
+                </p>
+
+            </div>
+
+
+            <div
+                id="heroesCollection"
+                class="heroes-collection"
+            >
+            </div>
+
+
+            <button
+                id="collectionBackButton"
+                class="primary-button"
+                type="button"
+            >
+                ← Volver al mapa
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="autismo.js"></script>
+
+</body>
+
+</html>

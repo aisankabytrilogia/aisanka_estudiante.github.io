@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Mapa de niveles de AISANKA"
+    >
+
+    <meta
+        name="theme-color"
+        content="#713dcc"
+    >
+
+    <title>AISANKA | Mapa de niveles</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="nivel.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <div class="fondo" aria-hidden="true">
+
+        <div class="brillo brillo-1"></div>
+        <div class="brillo brillo-2"></div>
+        <div class="brillo brillo-3"></div>
+
+        <div class="burbuja burbuja-1"></div>
+        <div class="burbuja burbuja-2"></div>
+        <div class="burbuja burbuja-3"></div>
+
+        <div class="estrella estrella-1">✦</div>
+        <div class="estrella estrella-2">✦</div>
+        <div class="estrella estrella-3">✦</div>
+
+    </div>
+
+
+
+    <header class="encabezado">
+
+        <button
+            id="botonVolver"
+            class="boton-volver"
+            type="button"
+            aria-label="Volver a mundos"
+            title="Volver a mundos"
+        >
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            <span>Volver</span>
+
+        </button>
+
+
+        <div class="informacion-mundo">
+
+            <span class="etiqueta-mundo">
+                MUNDO 1
+            </span>
+
+            <h1>
+                Explorando mi entorno
+            </h1>
+
+            <p>
+                Elige un nivel y comienza tu aventura.
+            </p>
+
+        </div>
+
+
+
+        <button
+            id="botonPerfil"
+            class="perfil-glass"
+            type="button"
+            aria-label="Abrir perfil del estudiante"
+            aria-haspopup="dialog"
+        >
+
+            <div class="perfil-avatar">
+
+                <img
+                    id="avatarEncabezado"
+                    src="images/perfil_guardabarranco.png"
+                    alt="Avatar del estudiante"
+                >
+
+            </div>
+
+            <div class="perfil-texto">
+
+                <span class="perfil-saludo">
+                    ¡Hola!
+                </span>
+
+                <strong id="nombreEstudiante">
+                    Estudiante
+                </strong>
+
+            </div>
+
+            <i class="fa-solid fa-chevron-down perfil-flecha"></i>
+
+        </button>
+
+    </header>
+
+
+
+
+    <main class="contenido">
+
+        <section
+            class="mapa-niveles"
+            aria-label="Mapa de niveles"
+        >
+
+
+            <div class="camino camino-1" aria-hidden="true">
+                <span></span>
+            </div>
+
+            <div class="camino camino-2" aria-hidden="true">
+                <span></span>
+            </div>
+
+
+
+            <article
+                class="nivel nivel-1 disponible"
+                data-nivel="1"
+                tabindex="0"
+                role="button"
+                aria-label="Nivel 1. Aprendamos a decir hola"
+            >
+
+                <div class="numero-nivel">
+                    <span>01</span>
+                </div>
+
+
+                <div class="imagen-nivel">
+
+                    <div class="halo-nivel"></div>
+
+                    <img
+                        src="images/nivel_1.png"
+                        alt="Nivel 1: Aprendamos a decir hola"
+                    >
+
+                    <div class="estado-nivel disponible">
+
+                        <i class="fa-solid fa-unlock"></i>
+
+                        <span>Disponible</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="texto-nivel">
+
+                    <span class="etiqueta-nivel">
+                        NIVEL 1
+                    </span>
+
+                    <h2>
+                        Aprendamos a decir hola
+                    </h2>
+
+                    <p>
+                        Comienza tu aventura aprendiendo
+                        una palabra muy especial.
+                    </p>
+
+                    <div class="accion-nivel">
+
+                        <span>
+                            Comenzar
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+
+            <article
+                class="nivel nivel-2 bloqueado"
+                data-nivel="2"
+                tabindex="0"
+                role="button"
+                aria-label="Nivel 2 bloqueado"
+            >
+
+                <div class="numero-nivel">
+                    <span>02</span>
+                </div>
+
+
+                <div class="imagen-nivel">
+
+                    <div class="halo-nivel"></div>
+
+                    <img
+                        src="images/nivel_2.png"
+                        alt="Nivel 2: Aprendamos a saludar formal"
+                    >
+
+                    <div class="candado">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                    </div>
+
+                    <div class="estado-nivel bloqueado">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <span>Bloqueado</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="texto-nivel">
+
+                    <span class="etiqueta-nivel">
+                        NIVEL 2
+                    </span>
+
+                    <h2>
+                        Aprendamos a saludar formal
+                    </h2>
+
+                    <p>
+                        Completa el nivel anterior para
+                        continuar tu aventura.
+                    </p>
+
+                    <div class="accion-nivel bloqueada">
+
+                        <span>
+                            Próximamente
+                        </span>
+
+                        <i class="fa-solid fa-lock"></i>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+
+            <article
+                class="nivel nivel-3 bloqueado"
+                data-nivel="3"
+                tabindex="0"
+                role="button"
+                aria-label="Nivel 3 bloqueado"
+            >
+
+                <div class="numero-nivel">
+                    <span>03</span>
+                </div>
+
+
+                <div class="imagen-nivel">
+
+                    <div class="halo-nivel"></div>
+
+                    <img
+                        src="images/nivel_3.png"
+                        alt="Nivel 3: Abecedario"
+                    >
+
+                    <div class="candado">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                    </div>
+
+                    <div class="estado-nivel bloqueado">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <span>Bloqueado</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="texto-nivel">
+
+                    <span class="etiqueta-nivel">
+                        NIVEL 3
+                    </span>
+
+                    <h2>
+                        Abecedario
+                    </h2>
+
+                    <p>
+                        Un nuevo desafío te espera
+                        más adelante.
+                    </p>
+
+                    <div class="accion-nivel bloqueada">
+
+                        <span>
+                            Próximamente
+                        </span>
+
+                        <i class="fa-solid fa-lock"></i>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+
+
+
+    </main>
+
+
+
+
+    <div
+        id="modalBloqueado"
+        class="modal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="modal-contenido modal-bloqueado"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="tituloBloqueado"
+        >
+
+            <button
+                id="cerrarModalBloqueado"
+                class="modal-cerrar"
+                type="button"
+                aria-label="Cerrar ventana"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <div class="modal-icono bloqueado">
+
+                <i class="fa-solid fa-lock"></i>
+
+            </div>
+
+
+            <span class="modal-etiqueta">
+                NIVEL BLOQUEADO
+            </span>
+
+
+            <h2 id="tituloBloqueado">
+                ¡Todavía no puedes entrar!
+            </h2>
+
+
+            <p id="mensajeBloqueado">
+                Este nivel todavía no ha sido habilitado
+                por tu docente.
+            </p>
+
+
+            <button
+                id="botonEntendidoBloqueado"
+                class="boton-modal"
+                type="button"
+            >
+
+                <i class="fa-solid fa-check"></i>
+
+                Entendido
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+
+    <div
+        id="modalPerfil"
+        class="modal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="modal-contenido perfil-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="tituloPerfil"
+        >
+
+            <button
+                id="cerrarModalPerfil"
+                class="modal-cerrar"
+                type="button"
+                aria-label="Cerrar perfil"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+
+            <div class="perfil-modal-header">
+
+                <div class="perfil-modal-avatar">
+
+                    <img
+                        id="avatarPerfil"
+                        src="images/perfil_guardabarranco.png"
+                        alt="Avatar del estudiante"
+                    >
+
+                    <div class="avatar-brillo"></div>
+
+                </div>
+
+
+                <div class="perfil-titulo">
+
+                    <span>
+                        MI PERFIL
+                    </span>
+
+                    <h2 id="tituloPerfil">
+
+                        <span id="nombrePerfil">
+                            Estudiante
+                        </span>
+
+                    </h2>
+
+                    <small>
+                        Personaliza tu aventura
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <section
+                class="selector-avatar"
+                aria-labelledby="tituloAvatares"
+            >
+
+                <div class="selector-avatar-titulo">
+
+                    <div>
+
+                        <span class="mini-etiqueta">
+                            TU PERSONAJE
+                        </span>
+
+                        <h3 id="tituloAvatares">
+                            Elige tu avatar
+                        </h3>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="avatares-opciones">
+
+
+
+                    <button
+                        class="avatar-opcion"
+                        type="button"
+                        data-avatar="perfil_gueguense.png"
+                        aria-label="Elegir avatar Güegüense"
+                    >
+
+                        <div class="avatar-opcion-imagen">
+
+                            <img
+                                src="images/perfil_gueguense.png"
+                                alt="Avatar Güegüense"
+                            >
+
+                            <div class="avatar-check">
+
+                                <i class="fa-solid fa-check"></i>
+
+                            </div>
+
+                        </div>
+
+                        <span>
+                            Güegüense
+                        </span>
+
+                    </button>
+
+
+
+
+                    <button
+                        class="avatar-opcion seleccionado"
+                        type="button"
+                        data-avatar="perfil_guardabarranco.png"
+                        aria-label="Elegir avatar Guardabarranco"
+                    >
+
+                        <div class="avatar-opcion-imagen">
+
+                            <img
+                                src="images/perfil_guardabarranco.png"
+                                alt="Avatar Guardabarranco"
+                            >
+
+                            <div class="avatar-check">
+
+                                <i class="fa-solid fa-check"></i>
+
+                            </div>
+
+                        </div>
+
+                        <span>
+                            Guardabarranco
+                        </span>
+
+                    </button>
+
+
+
+
+                    <button
+                        class="avatar-opcion"
+                        type="button"
+                        data-avatar="perfil_gigantona.png"
+                        aria-label="Elegir avatar Gigantona"
+                    >
+
+                        <div class="avatar-opcion-imagen">
+
+                            <img
+                                src="images/perfil_gigantona.png"
+                                alt="Avatar Gigantona"
+                            >
+
+                            <div class="avatar-check">
+
+                                <i class="fa-solid fa-check"></i>
+
+                            </div>
+
+                        </div>
+
+                        <span>
+                            Gigantona
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+
+            <div class="datos-perfil">
+
+                <div class="dato">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <div>
+                        <span>Correo</span>
+
+                        <strong id="correoPerfil">
+                            —
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <i class="fa-solid fa-school"></i>
+
+                    <div>
+                        <span>Escuela</span>
+
+                        <strong id="escuelaPerfil">
+                            —
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <i class="fa-solid fa-person-chalkboard"></i>
+
+                    <div>
+                        <span>Docente</span>
+
+                        <strong id="docentePerfil">
+                            —
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    <div>
+                        <span>Grado</span>
+
+                        <strong id="gradoPerfil">
+                            —
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <div>
+                        <span>Ubicación</span>
+
+                        <strong id="ubicacionPerfil">
+                            —
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <i class="fa-solid fa-map"></i>
+
+                    <div>
+                        <span>Zona</span>
+
+                        <strong id="zonaPerfil">
+                            —
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="dato heroes">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <div>
+                        <span>Héroes coleccionados</span>
+
+                        <strong id="heroesPerfil">
+                            0
+                        </strong>
+                    </div>
+
+                    <div class="mini-estrellas">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+            <button
+                id="botonCerrarSesion"
+                class="boton-cerrar-sesion"
+                type="button"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Cerrar sesión
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="nivel.js"></script>
+
+</body>
+
+</html>

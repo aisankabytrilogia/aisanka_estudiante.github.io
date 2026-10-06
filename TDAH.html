@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AISANKA | TDAH - Naksa</title>
+
+    <link rel="stylesheet" href="TDAH.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <div class="background-decoration decoration-one"></div>
+        <div class="background-decoration decoration-two"></div>
+        <div class="background-decoration decoration-three"></div>
+
+        <header class="top-bar">
+
+            <button class="back-button" id="backButton" type="button">
+                <span class="button-icon">←</span>
+                <span>Volver</span>
+            </button>
+
+            <div class="progress-container">
+
+                <div class="progress-text">
+                    <span id="progressLabel">1 de 4</span>
+                </div>
+
+                <div class="progress-track">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+
+            </div>
+
+            <div class="mission-badge">
+                <span class="mission-dot"></span>
+                <span>Misiones</span>
+            </div>
+
+        </header>
+
+
+        <main class="main-area">
+
+            <section class="learning-card" id="learningCard">
+
+                <div class="card-glow"></div>
+
+                <div class="card-content" id="cardContent">
+
+
+
+                    <article class="lesson-screen active" data-screen="1">
+
+                        <div class="lesson-number">
+                            PASO 1
+                        </div>
+
+                        <div class="attention-pulse"></div>
+
+                        <p class="small-title">
+                            Aprende una nueva palabra
+                        </p>
+
+                        <h1 class="main-word">
+                            NAKSA
+                        </h1>
+
+                        <div class="translation-box">
+
+                            <span class="translation-label">
+                                En español significa
+                            </span>
+
+                            <strong>
+                                Hola
+                            </strong>
+
+                        </div>
+
+                        <div class="video-wrapper greeting-video">
+
+                            <video
+                                id="greetingVideo"
+                                class="lesson-video"
+                                autoplay
+                                muted
+                                playsinline
+                                preload="auto"
+                            >
+                                <source
+                                    src="videos/hola_guardabarranco.mp4"
+                                    type="video/mp4"
+                                >
+                                Tu navegador no puede reproducir este video.
+                            </video>
+
+                            <button
+                                class="video-sound-button"
+                                id="greetingSoundButton"
+                                type="button"
+                            >
+                                Activar sonido
+                            </button>
+
+                        </div>
+
+                        <p class="instruction-text">
+                            Observa al guardabarranco y descubre cómo te saluda.
+                        </p>
+
+                        <button
+                            class="primary-button next-button"
+                            data-next="2"
+                            type="button"
+                        >
+                            Continuar
+                            <span>→</span>
+                        </button>
+
+                    </article>
+
+
+
+                    <article class="lesson-screen" data-screen="2">
+
+                        <div class="lesson-number">
+                            PASO 2
+                        </div>
+
+                        <div class="sound-orbit">
+
+                            <div class="sound-core">
+                                <span class="sound-bars">
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <p class="small-title">
+                            Ahora escucha con atención
+                        </p>
+
+                        <h2 class="section-title">
+                            ¿Cómo se pronuncia?
+                        </h2>
+
+                        <div class="pronunciation-word">
+                            NAKSA
+                        </div>
+
+                        <div class="audio-panel">
+
+                            <div class="audio-wave" id="audioWave">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <audio
+                                id="naksaAudio"
+                                preload="auto"
+                            >
+                                <source
+                                    src="sounds/nacksa.mp3"
+                                    type="audio/mpeg"
+                                >
+                            </audio>
+
+                            <button
+                                class="audio-button"
+                                id="playAudioButton"
+                                type="button"
+                            >
+                                <span class="audio-button-icon">▶</span>
+                                <span>Escuchar</span>
+                            </button>
+
+                        </div>
+
+                        <div class="attention-tip">
+                            <span class="tip-line"></span>
+                            Escucha una vez más si lo necesitas.
+                            <span class="tip-line"></span>
+                        </div>
+
+                        <div class="button-row">
+
+                            <button
+                                class="secondary-button previous-button"
+                                data-prev="1"
+                                type="button"
+                            >
+                                ← Atrás
+                            </button>
+
+                            <button
+                                class="primary-button next-button"
+                                data-next="3"
+                                type="button"
+                            >
+                                Ya lo escuché
+                                <span>→</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="lesson-screen" data-screen="3">
+
+                        <div class="lesson-number">
+                            PASO 3
+                        </div>
+
+                        <p class="small-title">
+                            Mira cómo se escribe
+                        </p>
+
+                        <h2 class="section-title">
+                            Hola en miskito
+                        </h2>
+
+                        <div class="writing-display">
+
+                            <div class="writing-word">
+                                NAKSA
+                            </div>
+
+                            <div class="writing-line"></div>
+
+                            <span>
+                                Observa cada movimiento
+                            </span>
+
+                        </div>
+
+                        <div class="video-wrapper writing-video">
+
+                            <video
+                                id="writingVideo"
+                                class="lesson-video"
+                                autoplay
+                                muted
+                                playsinline
+                                preload="auto"
+                            >
+                                <source
+                                    src="videos/escritura_hola_miskito.mp4"
+                                    type="video/mp4"
+                                >
+                                Tu navegador no puede reproducir este video.
+                            </video>
+
+                            <button
+                                class="video-sound-button"
+                                id="writingSoundButton"
+                                type="button"
+                            >
+                                Activar sonido
+                            </button>
+
+                        </div>
+
+                        <div class="focus-message">
+                            Mira, escucha y recuerda.
+                        </div>
+
+                        <div class="button-row">
+
+                            <button
+                                class="secondary-button previous-button"
+                                data-prev="2"
+                                type="button"
+                            >
+                                ← Atrás
+                            </button>
+
+                            <button
+                                class="primary-button next-button"
+                                data-next="4"
+                                type="button"
+                            >
+                                Siguiente
+                                <span>→</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="lesson-screen" data-screen="4">
+
+                        <div class="lesson-number">
+                            PASO 4
+                        </div>
+
+                        <div class="mission-icon">
+
+                            <div class="mission-target">
+                                <span></span>
+                            </div>
+
+                        </div>
+
+                        <p class="small-title">
+                            Prepárate para el reto
+                        </p>
+
+                        <h2 class="section-title">
+                            ¿Qué tienes que hacer?
+                        </h2>
+
+                        <div class="instructions-list">
+
+                            <div class="instruction-item">
+
+                                <span class="instruction-number">
+                                    1
+                                </span>
+
+                                <div>
+                                    <strong>Observa</strong>
+                                    <p>Mira los dos personajes.</p>
+                                </div>
+
+                            </div>
+
+                            <div class="instruction-item">
+
+                                <span class="instruction-number">
+                                    2
+                                </span>
+
+                                <div>
+                                    <strong>Escucha</strong>
+                                    <p>Pasa el mouse sobre cada video.</p>
+                                </div>
+
+                            </div>
+
+                            <div class="instruction-item">
+
+                                <span class="instruction-number">
+                                    3
+                                </span>
+
+                                <div>
+                                    <strong>Descubre</strong>
+                                    <p>Elige quién está diciendo NAKSA.</p>
+                                </div>
+
+                            </div>
+
+                            <div class="instruction-item">
+
+                                <span class="instruction-number">
+                                    4
+                                </span>
+
+                                <div>
+                                    <strong>Responde</strong>
+                                    <p>Haz clic en el video correcto.</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="important-message">
+                            Escucha con calma. Tú puedes hacerlo.
+                        </div>
+
+                        <div class="button-row">
+
+                            <button
+                                class="secondary-button previous-button"
+                                data-prev="3"
+                                type="button"
+                            >
+                                ← Atrás
+                            </button>
+
+                            <button
+                                class="primary-button"
+                                id="startGameButton"
+                                type="button"
+                            >
+                                Comenzar reto
+                                <span>→</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="lesson-screen game-screen" data-screen="game">
+
+                        <div class="game-header">
+
+                            <div>
+
+                                <div class="lesson-number">
+                                    RETO
+                                </div>
+
+                                <h2>
+                                    ¿Quién está diciendo NAKSA?
+                                </h2>
+
+                            </div>
+
+                            <div class="attempt-counter">
+                                Intentos:
+                                <strong id="attemptCount">
+                                    0
+                                </strong>
+                            </div>
+
+                        </div>
+
+                        <p class="game-instruction">
+                            Pasa el mouse sobre los videos para escuchar.
+                            Después elige la respuesta.
+                        </p>
+
+                        <div class="choice-grid">
+
+                            <button
+                                class="video-choice"
+                                data-answer="wrong"
+                                type="button"
+                            >
+
+                                <div class="choice-label">
+                                    Personaje 1
+                                </div>
+
+                                <div class="choice-video-container">
+
+                                    <video
+                                        class="choice-video"
+                                        data-video="parastah"
+                                        loop
+                                        playsinline
+                                        preload="auto"
+                                    >
+                                        <source
+                                            src="videos/parastah.mp4"
+                                            type="video/mp4"
+                                        >
+                                    </video>
+
+                                    <div class="play-indicator">
+                                        <span>Escuchar</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="choice-footer">
+                                    Pasa el mouse para escuchar
+                                </div>
+
+                            </button>
+
+
+                            <button
+                                class="video-choice"
+                                data-answer="correct"
+                                type="button"
+                            >
+
+                                <div class="choice-label">
+                                    Personaje 2
+                                </div>
+
+                                <div class="choice-video-container">
+
+                                    <video
+                                        class="choice-video"
+                                        data-video="naksa"
+                                        loop
+                                        playsinline
+                                        preload="auto"
+                                    >
+                                        <source
+                                            src="videos/naksa.mp4"
+                                            type="video/mp4"
+                                        >
+                                    </video>
+
+                                    <div class="play-indicator">
+                                        <span>Escuchar</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="choice-footer">
+                                    Pasa el mouse para escuchar
+                                </div>
+
+                            </button>
+
+                        </div>
+
+                        <div
+                            class="game-feedback"
+                            id="gameFeedback"
+                        ></div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+
+        <div
+            class="modal-overlay"
+            id="starsModal"
+            aria-hidden="true"
+        >
+
+            <div class="modal-card stars-modal-card">
+
+                <button
+                    class="modal-close"
+                    id="starsCloseButton"
+                    type="button"
+                    aria-label="Cerrar"
+                >
+                    ×
+                </button>
+
+                <div class="success-burst"></div>
+
+                <div class="modal-small-title">
+                    RETO COMPLETADO
+                </div>
+
+                <h2>
+                    ¡Lo lograste!
+                </h2>
+
+                <p id="attemptResultText">
+                    Completaste el reto.
+                </p>
+
+                <div
+                    class="stars-container"
+                    id="starsContainer"
+                >
+
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+
+                </div>
+
+                <p class="stars-message" id="starsMessage">
+                    ¡Excelente trabajo!
+                </p>
+
+                <button
+                    class="primary-button modal-primary-button"
+                    id="continueHeroButton"
+                    type="button"
+                >
+                    Continuar
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <div
+            class="modal-overlay"
+            id="heroModal"
+            aria-hidden="true"
+        >
+
+            <div class="modal-card hero-modal-card">
+
+                <div class="hero-unlock-ring">
+
+                    <div class="hero-unlock-icon">
+                        ★
+                    </div>
+
+                </div>
+
+                <div class="modal-small-title">
+                    NUEVO HÉROE DESBLOQUEADO
+                </div>
+
+                <h2>
+                    ¡Héroe de Nicaragua!
+                </h2>
+
+                <div class="hero-image-wrapper">
+
+                    <img
+                        id="unlockedHeroImage"
+                        src=""
+                        alt="Héroe desbloqueado"
+                    >
+
+                </div>
+
+                <h3 id="unlockedHeroName">
+                    Héroe
+                </h3>
+
+                <p>
+                    Has conseguido un nuevo héroe para tu colección.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button
+                        class="secondary-button"
+                        id="collectionButton"
+                        type="button"
+                    >
+                        Ver héroes
+                    </button>
+
+                    <button
+                        class="primary-button"
+                        id="mapButton"
+                        type="button"
+                    >
+                        Volver al mapa
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div
+            class="modal-overlay"
+            id="collectionModal"
+            aria-hidden="true"
+        >
+
+            <div class="modal-card collection-modal-card">
+
+                <button
+                    class="modal-close"
+                    id="collectionCloseButton"
+                    type="button"
+                    aria-label="Cerrar"
+                >
+                    ×
+                </button>
+
+                <div class="modal-small-title">
+                    MI COLECCIÓN
+                </div>
+
+                <h2>
+                    Héroes desbloqueados
+                </h2>
+
+                <div
+                    class="hero-collection"
+                    id="heroCollection"
+                ></div>
+
+                <button
+                    class="primary-button modal-primary-button"
+                    id="collectionMapButton"
+                    type="button"
+                >
+                    Volver al mapa
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="TDAH.js"></script>
+
+</body>
+
+</html>
